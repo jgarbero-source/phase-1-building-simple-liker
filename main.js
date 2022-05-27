@@ -23,3 +23,26 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
     }, 300);
   });
 }
+
+// When a user clicks on an empty heart:
+// Invoke mimicServerCall to simulate making a server request
+
+const heart = document.querySelector('span.like-glyph')
+
+function heartLike() {
+  heart.addEventListener('click', mimicServerCall)
+}
+
+//find the heart button and then add an event listener
+  //this event listener will do a fetch request
+    //catch and then
+
+
+// When the "server" returns a failure status:
+// Respond to the error using a .catch(() => {}) block after your .then(() => {}) block.
+// Display the error modal by removing the .hidden class
+// Display the server error message in the modal
+// Use setTimeout to hide the modal after 3 seconds (add the .hidden class)
+// When the "server" returns a success status:
+// Change the heart to a full heart
+// Add the .activated-heart class to make the heart appear red
